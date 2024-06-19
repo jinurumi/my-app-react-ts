@@ -1,24 +1,24 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Store from './Store';
+import {Restaurant} from "./model/restaurant"
 
-function App() {
+let data:Restaurant ={ //타입만들어주기
+  name:'누나네 식당',
+  category:'western',
+  address:{
+    city:'incheon',
+    detail:'somewhere',
+    zipCode:23425634
+  },
+  menu:[{name:"rose pasta", price:2000,category:"PASTA"},{name:"garlic steak",price:3000,category:"STEAK"}]
+}
+
+const App:React.FC = ()=> {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Store info={data}/>
     </div>
   );
 }
