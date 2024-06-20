@@ -12,7 +12,7 @@ let data:Restaurant ={ //타입만들어주기
     detail:'somewhere',
     zipCode:23425634
   },
-  menu:[{name:"rose pasta", price:2000,category:"PASTA"},{name:"garlic steak",price:3000,category:"STEAK"}]
+  menu:[{name:"rose pasta", price:2000, category:"PASTA"},{name:"garlic steak",price:3000, category:"STEAK"}]
 }
 
 const App:React.FC = ()=> {
